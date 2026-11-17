@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Cart - Himalaya Navudhyan</title>
+  <meta name="description" content="Review your mushrooms and place your order.">
+  <meta name="theme-color" content="#1f4a2c">
+  <meta property="og:title" content="Your Cart - Himalaya Navudhyan">
+  <meta property="og:description" content="Review your mushrooms and place your order.">
+  <meta property="og:image" content="images/logo-large.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Himalaya Navudhyan – home">
+      <img src="images/logo.jpg" alt="" width="44" height="44">
+      <span>Himalaya Navudhyan</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="loginpage.html">Login</a></li>
+        <li><a href="cart.html" aria-current="page">Cart <span class="cart-count" hidden aria-label="items in cart">0</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-banner"><div class="container"><h1>Shopping cart</h1><p>Review your items and enter delivery details.</p></div></section>
+
+<div id="cart-empty" class="container" hidden style="margin-block:clamp(24px,5vw,56px)">
+  <div class="empty">
+    <div class="ico">🧺</div>
+    <h2>Your cart is empty</h2>
+    <p>Fresh mushrooms are waiting - pick something you like.</p>
+    <a class="btn" href="product.html">Shop products</a>
+  </div>
+</div>
+
+<div id="cart-layout" class="cart-layout" hidden>
+  <section aria-label="Items in your cart"><div id="cart-items" class="cart-items"></div></section>
+
+  <aside class="cart-summary" id="cart-summary-box" aria-labelledby="sum-h">
+    <h2 id="sum-h">Order summary</h2>
+    <div class="sum-row"><span>Quantity</span><span id="sum-items">0 Kg</span></div>
+    <div class="sum-row"><span>Subtotal</span><span id="sum-subtotal">₹0</span></div>
+    <div class="sum-row"><span>Delivery</span><span>Confirmed on order</span></div>
+    <div class="sum-row total"><span>Total</span><span id="sum-total">₹0</span></div>
+    <hr>
+    <h2>Delivery details</h2>
+    <form id="delivery-form" novalidate>
+      <div class="field"><label for="d-name">Full name</label><input id="d-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field-row">
+        <div class="field"><label for="d-phone">Phone number</label><input id="d-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9+ \-]{10,15}" placeholder="10-digit mobile" required></div>
+        <div class="field"><label for="d-email">Email</label><input id="d-email" name="email" type="email" inputmode="email" autocomplete="email" required></div>
+      </div>
+      <div class="field"><label for="d-address">Address</label><textarea id="d-address" name="address" rows="2" autocomplete="street-address" placeholder="House no., street, area" required style="min-height:80px"></textarea></div>
+      <div class="field-row">
+        <div class="field"><label for="d-city">City</label><input id="d-city" name="city" type="text" autocomplete="address-level2" required></div>
+        <div class="field"><label for="d-pin">PIN code</label><input id="d-pin" name="pincode" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" maxlength="6" placeholder="6 digits" required></div>
+      </div>
+      <button class="btn btn--block" type="submit">Place order</button>
+      <p class="field-hint" style="text-align:center;margin-top:10px">We'll confirm delivery charges and payment on WhatsApp.</p>
+    </form>
+  </aside>
+</div>
+
+<div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="om-h">
+  <div class="modal-box">
+    <div class="ico">🎉</div>
+    <h2 id="om-h">Almost done!</h2>
+    <p>Your order <span class="order-ref" id="order-ref"></span> is ready. Tap below to send it to us on WhatsApp – we'll confirm delivery charges and payment there.</p>
+    <a class="btn btn--block" id="order-wa" href="#" target="_blank" rel="noopener">Send order on WhatsApp</a>
+    <button class="btn btn--ghost btn--block" id="order-close" type="button">Back to cart</button>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="images/logo.jpg" alt="" width="44" height="44"><strong>Himalaya Navudhyan</strong></div>
+        <p>Fresh, organic and authentic Himalaya mushrooms - from our farm in Uttarakhand to your door.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="milckymushroom.html">Milky Mushroom</a></li>
+          <li><a href="dryoyster.html">Dry Oyster Mushroom</a></li>
+          <li><a href="mixeddrymushroom.html">Mixed Dry Mushroom</a></li>
+          <li><a href="mushroompickle.html">Mushroom Pickle</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://wa.me/917836058491" rel="noopener">WhatsApp us</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Himalaya Navudhyan. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
