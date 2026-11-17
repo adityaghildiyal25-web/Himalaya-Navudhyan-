@@ -8,23 +8,23 @@
   <meta name="theme-color" content="#1f4a2c">
   <meta property="og:title" content="Your Cart - Himalaya Navudhyan">
   <meta property="og:description" content="Review your mushrooms and place your order.">
-  <meta property="og:image" content="images/logo-large.jpg">
+  <meta property="og:image" content="logo-large.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html" aria-label="Himalaya Navudhyan – home">
-      <img src="images/logo.jpg" alt="" width="44" height="44">
+      <img src="logo.jpg" alt="" width="44" height="44">
       <span>Himalaya Navudhyan</span>
     </a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
@@ -68,10 +68,10 @@
     <form id="delivery-form" novalidate>
       <div class="field"><label for="d-name">Full name</label><input id="d-name" name="name" type="text" autocomplete="name" required></div>
       <div class="field-row">
-        <div class="field"><label for="d-phone">Phone number</label><input id="d-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9+ \-]{10,15}" placeholder="10-digit mobile" required></div>
+        <div class="field"><label for="d-phone">Phone number</label><input id="d-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9+ \-]{10,15}" placeholder="10-digit mobile number" required></div>
         <div class="field"><label for="d-email">Email</label><input id="d-email" name="email" type="email" inputmode="email" autocomplete="email" required></div>
       </div>
-      <div class="field"><label for="d-address">Address</label><textarea id="d-address" name="address" rows="2" autocomplete="street-address" placeholder="House no., street, area" required style="min-height:80px"></textarea></div>
+      <div class="field"><label for="d-address">Address</label><textarea id="d-address" name="address" rows="2" autocomplete="street-address" placeholder="House no., street, area" required style="resize:vertical"></textarea></div>
       <div class="field-row">
         <div class="field"><label for="d-city">City</label><input id="d-city" name="city" type="text" autocomplete="address-level2" required></div>
         <div class="field"><label for="d-pin">PIN code</label><input id="d-pin" name="pincode" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" maxlength="6" placeholder="6 digits" required></div>
@@ -96,7 +96,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><img src="images/logo.jpg" alt="" width="44" height="44"><strong>Himalaya Navudhyan</strong></div>
+        <div class="footer-brand"><img src="logo.jpg" alt="" width="44" height="44"><strong>Himalaya Navudhyan</strong></div>
         <p>Fresh, organic and authentic Himalaya mushrooms - from our farm in Uttarakhand to your door.</p>
       </div>
       <div>
@@ -121,6 +121,6 @@
     <p class="copyright">© 2026 Himalaya Navudhyan. All rights reserved.</p>
   </div>
 </footer>
-<script src="js/site.js"></script>
+<script src="site.js"></script>
 </body>
 </html>

@@ -11,19 +11,19 @@
   /* ---------- Product catalogue (single source of truth) ---------- */
   var CATALOG = {
     "milky": {
-      name: "Milky Mushroom", price: 1099, img: "images/milky.jpg", page: "milckymushroom.html",
+      name: "Milky Mushroom", price: 1099, img: "milky.jpg", page: "milckymushroom.html",
       desc: "Firm, snow-white fresh mushrooms with a mild, naturally sweet flavour."
     },
     "dry-oyster": {
-      name: "Dry Oyster Mushroom", price: 1199, img: "images/dry-oyster.jpg", page: "dryoyster.html",
+      name: "Dry Oyster Mushroom", price: 1199, img: "dry-oyster.jpg", page: "dryoyster.html",
       desc: "Sun-dried oyster mushroom with deep umami flavour for soups, curries and noodles."
     },
     "mixed-dry": {
-      name: "Mixed Dry Mushroom", price: 1299, img: "images/mixed-dry.jpg", page: "mixeddrymushroom.html",
+      name: "Mixed Dry Mushroom", price: 1299, img: "mixed-dry.jpg", page: "mixeddrymushroom.html",
       desc: "A rich blend of dried mushrooms for stocks, gravies and stir-fries."
     },
     "pickle": {
-      name: "Mushroom Pickle", price: 499, img: "images/pickle.jpg", page: "mushroompickle.html",
+      name: "Mushroom Pickle", price: 499, img: "pickle.jpg", page: "mushroompickle.html",
       desc: "Spicy, tangy mushroom pickle - a flavourful side for any meal."
     }
   };
